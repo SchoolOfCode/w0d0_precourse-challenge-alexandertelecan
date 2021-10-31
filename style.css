@@ -1,0 +1,260 @@
+:root {
+    --navy-dark: #1E2235;
+    --navy-light: #25293C;
+    --navy-logo: #022554;
+    --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--navy-logo);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 3.5rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+p, figcaption, li {
+    font-family: 'Open Sans', serif;
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+    color: var(--navy-light);
+}
+
+a,
+a:visited,
+a:focus {
+    text-decoration: none;
+}
+
+ul li {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    line-height: 2.5rem;
+}
+
+ul li:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+iframe {
+    width: 100%;
+    height: 23rem;
+}
+header {
+    height: 98vh;
+    max-width: 100%;
+    background: url('data/imgs/team-og-header.png'), linear-gradient(to bottom, var(--navy-dark), var(--navy-light));
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    position: fixed;
+    top: -10rem;
+    left: 2rem;
+    animation: dropDown 1.5s ease-in-out forwards;
+}
+
+header a img {
+    height: 5rem;
+}
+
+header h1 {
+    font-size: 8rem;
+    animation: headerSpacing 2s forwards;
+    margin-bottom: 0rem;
+}
+
+header p {
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+main {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 5rem 0rem;
+}
+
+#img-div {
+    margin: 2rem 0rem 5rem;
+}
+
+#img-div, figure {
+    max-width: 100%;
+}
+
+#img-div figure img {
+    max-width: 100%;
+}
+
+#img-div figure figcaption {
+    font-size: 1.5rem;
+}
+
+#videos {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#videos article {
+    width: 30%;
+}
+.video-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.video-container article h4 {
+    text-align: center;
+}
+@keyframes headerSpacing {
+    0% {
+        letter-spacing: normal;
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    100% {
+        letter-spacing: 2rem;
+        opacity: 1;
+    }
+}
+
+@keyframes dropDown {
+    0% {
+        top: -10rem;
+    }
+
+    60% {
+        top: 4rem;
+    }
+
+    80% {
+        top: 1rem;
+    }
+
+    100% {
+        top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    header {
+        height: 60vh;
+        max-width: 100%;
+        background: url('data/imgs/team-og-header.png'), linear-gradient(to bottom, var(--navy-dark), var(--navy-light));
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: var(--white);
+    }
+
+    header h1 {
+        font-size: 4rem;
+        letter-spacing: 0.5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    p, figcaption, li {
+        font-family: 'Open Sans', serif;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        color: var(--navy-light);
+    }
+
+    #img-div figure figcaption {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    ul li {
+        font-size: 1.4rem;
+        margin-left: 0.5rem;
+        line-height: 2.5rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .video-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #videos article {
+        width: 100%;
+    }
+
+    #videos article:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+
+    @keyframes headerSpacing {
+        0% {
+            letter-spacing: normal;
+            opacity: 0;
+        }
+        
+        50% {
+            opacity: 1;
+        }
+        100% {
+            letter-spacing: 0.5rem;
+            opacity: 1;
+        }
+    }
+}
